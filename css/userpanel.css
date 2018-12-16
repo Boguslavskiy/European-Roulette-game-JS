@@ -24,6 +24,10 @@
     cursor: pointer;
     margin-bottom: 15px;
 }
+#userpanel #continue{
+    background: #b60a0a;
+    color: #ffd700;
+}
 #userpanel .button:hover{
     background: #0e0ecf;
 }
@@ -54,4 +58,8 @@
     background: #066806;
     border: 4px solid #0d0d61;
     padding: 10px 20px;
+}
+
+.hidden{
+    display: none;
 }

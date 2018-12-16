@@ -1,5 +1,6 @@
 #roulette{
     position: relative;
+    overflow: hidden;
 }
 #wheel{
     width: 300px;
