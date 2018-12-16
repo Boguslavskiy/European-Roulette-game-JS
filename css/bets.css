@@ -1,4 +1,4 @@
-#number-1::before{
+.cell-amount{
     position: absolute;
     content: "$500";
     top: 0;
