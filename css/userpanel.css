@@ -1,0 +1,57 @@
+#userpanel{
+    width: 100%;
+    height: 300px;
+    background: #333;
+    display: flex;
+}
+
+#userpanel #balance{
+    color: #fff;
+    font-size: 36px;
+}
+#userpanel .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+#userpanel .button{
+    color: #fff;
+    font-size: 30px;
+    background: #0d0d61;
+    text-align: center;
+    padding: 10px 10px;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+#userpanel .button:hover{
+    background: #0e0ecf;
+}
+#userpanel #result{
+    color: #fff;
+    font-size: 36px;
+    background: #066806;
+    text-align: center;
+    padding: 10px 0;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    cursor: not-allowed;;
+}
+.bets-list{
+    padding: 0 20px;
+    color: #fff;
+}
+.bets-list h3{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 5px;
+}
+.bets-list-inner{
+    width: 300px;
+    height: 70%;
+    overflow: auto;
+    font-size: 24px;
+    background: #066806;
+    border: 4px solid #0d0d61;
+    padding: 10px 20px;
+}

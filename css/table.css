@@ -1,0 +1,92 @@
+#table{
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px 80px 80px;
+    grid-row-gap: 2px;
+    grid-column-gap: 2px;
+
+    background: #066806;
+    padding: 50px;
+}
+
+.grid-areas{
+    grid-template-areas: 
+    'Z A3 A6 A9 A12 A15 A18 A21 A24 A27 A30 A33 A36' 
+    'Z B2 B5 B8 B11 B14 B17 B20 B23 B26 B29 B32 B35' 
+    'Z C1 C4 C7 C10 C13 C16 C19 C22 C25 C28 C31 C34'
+    '. SA1 SA1 SA1 SA1 SA2 SA2 SA2 SA2 SA3 SA3 SA3 SA3'
+    '. SB1 SB1 SB2 SB2 SB3 SB3 SB4 SB4 SB5 SB5 SB6 SB6';
+}
+
+#number-zero { grid-area: Z; }
+#number-1 { grid-area: C1; }
+#number-2 { grid-area: B2; }
+#number-3 { grid-area: A3; }
+#number-4 { grid-area: C4; }
+#number-5 { grid-area: B5; }
+#number-6 { grid-area: A6; }
+#number-7 { grid-area: C7; }
+#number-8 { grid-area: B8; }
+#number-9 { grid-area: A9; }
+#number-10 { grid-area: C10; }
+#number-11 { grid-area: B11; }
+#number-12 { grid-area: A12; }
+#number-13 { grid-area: C13; }
+#number-14 { grid-area: B14; }
+#number-15 { grid-area: A15; }
+#number-16 { grid-area: C16; }
+#number-17 { grid-area: B17; }
+#number-18 { grid-area: A18; }
+#number-19 { grid-area: C19; }
+#number-20 { grid-area: B20; }
+#number-21 { grid-area: A21; }
+#number-22 { grid-area: C22; }
+#number-23 { grid-area: B23; }
+#number-24 { grid-area: A24; }
+#number-25 { grid-area: C25; }
+#number-26 { grid-area: B26; }
+#number-27 { grid-area: A27; }
+#number-28 { grid-area: C28; }
+#number-29 { grid-area: B29; }
+#number-30 { grid-area: A30; }
+#number-31 { grid-area: C31; }
+#number-32 { grid-area: B32; }
+#number-33 { grid-area: A33; }
+#number-34 { grid-area: C34; }
+#number-35 { grid-area: B35; }
+#number-36 { grid-area: A36; }
+
+#section-1-12 { grid-area: SA1; }
+#section-2-12 { grid-area: SA2; }
+#section-3-12 { grid-area: SA3; }
+
+#section-1-18 { grid-area: SB1; }
+#section-even { grid-area: SB2; }
+#section-black { grid-area: SB3; }
+#section-red { grid-area: SB4; }
+#section-odd { grid-area: SB5; }
+#section-19-36 { grid-area: SB6; }
+
+.cell{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #7dc706;
+    background: #066806;
+    color: #fff;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cell:hover{
+    background: #d8ffde;
+    color: #000;
+}
+.red{
+    background: #b60a0a;
+}
+.black{
+    background: #000;
+}
