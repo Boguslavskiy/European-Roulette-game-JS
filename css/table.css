@@ -88,9 +88,34 @@
     background: #d8ffde;
     color: #000;
 }
+.cell-amount{
+    position: absolute;
+    content: "$500";
+    top: 0;
+    left: 0;
+    color: #ffd700;
+    font-size: 20px;
+    margin: 4px;
+}
 .red{
     background: #b60a0a;
 }
 .black{
     background: #000;
+}
+
+@media screen and (max-width: 1200px){
+    #table{
+        grid-template-columns: 65px 65px 65px 65px 65px 65px 65px 65px 65px 65px 65px 65px 65px 65px;
+        grid-template-rows: 65px 65px 65px 65px 65px;
+        grid-row-gap: 1px;
+        grid-column-gap: 1px;
+        padding: 40px;
+    }
+    .cell{
+        font-size: 24px;
+    }
+    .cell-amount{
+        font-size: 16px;
+    }
 }

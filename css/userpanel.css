@@ -1,19 +1,22 @@
-#userpanel{
+.userpanel{
     width: 100%;
-    height: 300px;
+    height: auto;
     background: #333;
+    padding: 30px;
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-#userpanel #balance{
+#balance{
     color: #fff;
     font-size: 36px;
 }
-#userpanel .buttons{
+.buttons{
     display: flex;
     justify-content: space-between;
 }
-#userpanel .button{
+.button{
     color: #fff;
     font-size: 30px;
     background: #0d0d61;
@@ -24,14 +27,14 @@
     cursor: pointer;
     margin-bottom: 15px;
 }
-#userpanel #continue{
+#continue{
     background: #b60a0a;
     color: #ffd700;
 }
-#userpanel .button:hover{
+.button:hover{
     background: #0e0ecf;
 }
-#userpanel #result{
+#result{
     color: #fff;
     font-size: 36px;
     background: #066806;
@@ -44,15 +47,17 @@
 .bets-list{
     padding: 0 20px;
     color: #fff;
+    width: 300px;
+    height: 300px;
 }
 .bets-list h3{
     text-align: center;
     font-size: 1.5em;
-    margin: 5px;
+    margin: 0 0 5px 0;
 }
 .bets-list-inner{
-    width: 300px;
-    height: 70%;
+    width: 100%;
+    height: 80%;
     overflow: auto;
     font-size: 14px;
     background: #066806;
@@ -62,4 +67,28 @@
 
 .hidden{
     display: none;
+}
+
+
+.chip-set{
+    width: 300px;
+    height: 300px;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+.chip{
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+    background: #fff;
+    color: #333;
+    border: 4px dashed #8b8b8b;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }

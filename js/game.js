@@ -10,6 +10,15 @@ const BUTTON_CONTINUE       = document.getElementById('continue');
 const WHEEL                 = document.getElementById('wheel'); 
 const RESULT                = document.getElementById('result'); 
 
+const CHIP_1                = document.getElementById('chip-1'); 
+const CHIP_5                = document.getElementById('chip-5'); 
+const CHIP_10               = document.getElementById('chip-10'); 
+const CHIP_25               = document.getElementById('chip-25'); 
+const CHIP_50               = document.getElementById('chip-50'); 
+const CHIP_100              = document.getElementById('chip-100'); 
+const CHIP_500              = document.getElementById('chip-500'); 
+const CHIP_1000             = document.getElementById('chip-1000'); 
+
 class Game{
     constructor(){
         // Набор игровых клеток
@@ -75,6 +84,12 @@ class Game{
         this._updateInterface();
     }
 
+    // Устанавливаем номинал текущих фишек
+    setChipValue(value){
+        this.countChipValue = value;
+        this._updateInterface();
+    }
+
     // Подготовить игру к следующему раунду
     prepareNextSpin(){
         this.rouletteInProcess = false;
@@ -115,6 +130,40 @@ class Game{
             BUTTON_CLEAR.className = "button";
             BUTTON_CONTINUE.className = "button hidden";
         }
+
+        // Обновляем фишки
+        if(this.countChipValue == 1){
+            CHIP_1.style.borderColor = '#ff0000';
+        }else CHIP_1.style.borderColor = '#8b8b8b';
+
+        if(this.countChipValue == 5){
+            CHIP_5.style.borderColor = '#ff0000';
+        }else CHIP_5.style.borderColor = '#8b8b8b';
+
+        if(this.countChipValue == 10){
+            CHIP_10.style.borderColor = '#ff0000';
+        }else CHIP_10.style.borderColor = '#8b8b8b';
+
+        if(this.countChipValue == 25){
+            CHIP_25.style.borderColor = '#ff0000';
+        }else CHIP_25.style.borderColor = '#8b8b8b';
+
+        if(this.countChipValue == 50){
+            CHIP_50.style.borderColor = '#ff0000';
+        }else CHIP_50.style.borderColor = '#8b8b8b';
+
+        if(this.countChipValue == 100){
+            CHIP_100.style.borderColor = '#ff0000';
+        }else CHIP_100.style.borderColor = '#8b8b8b';
+
+        if(this.countChipValue == 500){
+            CHIP_500.style.borderColor = '#ff0000';
+        }else CHIP_500.style.borderColor = '#8b8b8b';
+
+        if(this.countChipValue == 1000){
+            CHIP_1000.style.borderColor = '#ff0000';
+        }else CHIP_1000.style.borderColor = '#8b8b8b';
+
     }
 
     // Приватный метод. Получение случайного числа
@@ -279,6 +328,8 @@ class Game{
 
 let game = new Game;
 
+game._updateInterface();
+
 // Обработка нажатия игровых клеток
 for(let i=0; i< TABLE_CELLS.length; i++){
     TABLE_CELLS[i].onclick = function(){
@@ -293,4 +344,28 @@ BUTTON_CLEAR.onclick = function(){
 }
 BUTTON_CONTINUE.onclick = function(){
     game.prepareNextSpin();
+}
+CHIP_1.onclick = function(){
+    game.setChipValue(1);
+}
+CHIP_5.onclick = function(){
+    game.setChipValue(5);
+}
+CHIP_10.onclick = function(){
+    game.setChipValue(10);
+}
+CHIP_25.onclick = function(){
+    game.setChipValue(25);
+}
+CHIP_50.onclick = function(){
+    game.setChipValue(50);
+}
+CHIP_100.onclick = function(){
+    game.setChipValue(100);
+}
+CHIP_500.onclick = function(){
+    game.setChipValue(500);
+}
+CHIP_1000.onclick = function(){
+    game.setChipValue(1000);
 }

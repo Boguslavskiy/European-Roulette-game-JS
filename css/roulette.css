@@ -1,10 +1,11 @@
-#roulette{
-    position: relative;
+.roulette{
     overflow: hidden;
+    min-width: 300px;
+    min-height: 300px;
 }
 #wheel{
-    width: 300px;
-    height: 300px;
+    min-width: 300px;
+    min-height: 300px;
     background-image: url(../img/wheel.png);
     background-size: contain;
     background-repeat: no-repeat;
