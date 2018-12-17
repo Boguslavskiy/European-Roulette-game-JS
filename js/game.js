@@ -3,6 +3,7 @@
 const TABLE_CELLS           = document.getElementsByClassName('cell'); 
 const TABLE_CELLS_TEXT      = document.getElementsByClassName('cell-amount'); 
 const INTERFACE_BALANCE     = document.getElementById('balance-text');
+const INTERFACE_BET_LOG     = document.getElementById('bets-list-text');
 const BUTTON_SPIN           = document.getElementById('spin');
 const BUTTON_CLEAR          = document.getElementById('clear');
 const BUTTON_CONTINUE       = document.getElementById('continue');
@@ -130,9 +131,11 @@ class Game{
 
     // Запуск рулетки
     startSpin(){
+        let logString = `BET: ${this.userBalancePrev - this.userBalance}usd, PREVIOUS: ${this.userBalancePrev}usd, `;
         this.rouletteInProcess = true;
 
         // Убираем предыдущее состояние баланса.
+        
         this.userBalancePrev = this.userBalance;
 
         this._updateInterface();
@@ -244,18 +247,37 @@ class Game{
                     }
                 }
 
-                game._updateInterface();
+                // Check 2 to 1 TOP   (46, 47, 48)
+                for(let i=3; i<=36; i=i+3){
+                    if(game.cellSet[46] > 0 && i == result){
+                        game._payWinnings(2, 46);
+                    }
+                }
 
+                // Check 2 to 1 MIDDLE
+                for(let i=2; i<=35; i=i+3){
+                    if(game.cellSet[47] > 0 && i == result){
+                        game._payWinnings(2, 47);
+                    }
+                }
+
+                // Check 2 to 1 BOTTOM
+                for(let i=1; i<=34; i=i+3){
+                    if(game.cellSet[48] > 0 && i == result){
+                        game._payWinnings(2, 48);
+                    }
+                }
+                
+
+                logString += ` RESULT: ${game.userBalance}usd \n\n`;
+                INTERFACE_BET_LOG.innerText = logString + INTERFACE_BET_LOG.innerText;
+                game._updateInterface();
             }
         }, 10);
     }
 }
 
 let game = new Game;
-
-
-
-
 
 // Обработка нажатия игровых клеток
 for(let i=0; i< TABLE_CELLS.length; i++){
@@ -267,10 +289,8 @@ BUTTON_SPIN.onclick = function(){
     game.startSpin();
 }
 BUTTON_CLEAR.onclick = function(){
-    
     game.clearAll();
 }
 BUTTON_CONTINUE.onclick = function(){
     game.prepareNextSpin();
-
 }

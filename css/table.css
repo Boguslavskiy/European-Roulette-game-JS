@@ -1,6 +1,6 @@
 #table{
     display: grid;
-    grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+    grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
     grid-template-rows: 80px 80px 80px 80px 80px;
     grid-row-gap: 2px;
     grid-column-gap: 2px;
@@ -11,11 +11,11 @@
 
 .grid-areas{
     grid-template-areas: 
-    'Z A3 A6 A9 A12 A15 A18 A21 A24 A27 A30 A33 A36' 
-    'Z B2 B5 B8 B11 B14 B17 B20 B23 B26 B29 B32 B35' 
-    'Z C1 C4 C7 C10 C13 C16 C19 C22 C25 C28 C31 C34'
-    '. SA1 SA1 SA1 SA1 SA2 SA2 SA2 SA2 SA3 SA3 SA3 SA3'
-    '. SB1 SB1 SB2 SB2 SB3 SB3 SB4 SB4 SB5 SB5 SB6 SB6';
+    'Z A3 A6 A9 A12 A15 A18 A21 A24 A27 A30 A33 A36 D1' 
+    'Z B2 B5 B8 B11 B14 B17 B20 B23 B26 B29 B32 B35 D2' 
+    'Z C1 C4 C7 C10 C13 C16 C19 C22 C25 C28 C31 C34 D3'
+    '. SA1 SA1 SA1 SA1 SA2 SA2 SA2 SA2 SA3 SA3 SA3 SA3 .'
+    '. SB1 SB1 SB2 SB2 SB3 SB3 SB4 SB4 SB5 SB5 SB6 SB6 .';
 }
 
 #number-zero { grid-area: Z; }
@@ -66,6 +66,10 @@
 #section-red { grid-area: SB4; }
 #section-odd { grid-area: SB5; }
 #section-19-36 { grid-area: SB6; }
+
+#section-2-to-1-top { grid-area: D1; }
+#section-2-to-1-middle { grid-area: D2; }
+#section-2-to-1-bottom { grid-area: D3; }
 
 .cell{
     position: relative;
