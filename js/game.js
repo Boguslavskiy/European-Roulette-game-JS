@@ -59,7 +59,7 @@ class Game{
     makeBet(number){
         if(number >= 0 && number < this.cellSet.length)
         {
-            if(this.userBalance - this.countChipValue > 0){
+            if(this.userBalance - this.countChipValue >= 0){
                 this.cellSet[number] += this.countChipValue;
                 this.userBalance -= this.countChipValue;
             }
